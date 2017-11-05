@@ -23,7 +23,7 @@ app.use('/api', API);
 
 //External Other Routes
 app.get('*', function (req, res) {
-  console.log('works as expected');
+  console.log('update happened');
   res.sendFile(__dirname + '/public/views/pages/index.html');
 });
 
