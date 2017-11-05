@@ -10,7 +10,7 @@ var API = require(__dirname + '/API.js');
 //var ip = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 //var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080;
 var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080;
-var ip = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
+var ip = process.env.IP   || process.env.DIAPERSAPP_PORT_8080_TCP_ADDR || '0.0.0.0';
 
 //Middleware
 app.use(compression());
