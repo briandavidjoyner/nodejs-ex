@@ -9,8 +9,8 @@ var API = require(__dirname + '/API.js');
 //OpenShift Settings
 //var ip = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 //var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080;
-var port = 8080;
-var ip = 'localhost'
+var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080;
+var ip = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 
 //Middleware
 app.use(compression());
@@ -30,3 +30,5 @@ app.get('*', function (req, res) {
 //app Initialize
 app.listen(port, ip);
 console.log('Server running on http://%s:%s', ip, port);
+
+module.exports = app;
