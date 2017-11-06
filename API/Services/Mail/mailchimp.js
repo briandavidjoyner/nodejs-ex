@@ -13,8 +13,8 @@ exports.subscribe = function(email,size,brand){
       double_optin: false,
       status: 'subscribed',
       merge_fields:{
-        Size:size, 
-        Brand:brand
+        SIZE:size, 
+        BRAND:brand
       }
     })
     .then(function(results){
