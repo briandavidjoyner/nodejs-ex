@@ -3,12 +3,9 @@ var express = require('express');
 var	app = express();
 var	Promise = require('promise');
 var compression = require('compression');
-
 var API = require(__dirname + '/API.js');
 
-//OpenShift Settings
-//var ip = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
-//var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080;
+//Port & IP Settings
 var port = process.env.PORT || 8080;
 var ip = process.env.IP || '0.0.0.0';
 
@@ -23,7 +20,6 @@ app.use('/api', API);
 
 //External Other Routes
 app.get('*', function (req, res) {
-  console.log('update happened');
   res.sendFile(__dirname + '/public/views/pages/index.html');
 });
 
