@@ -20,7 +20,7 @@ app.use('/api', API);
 
 //External Other Routes
 app.get('*', function (req, res) {
-  res.sendFile(__dirname + '/public/views/pages/index.html');
+  res.sendFile(__dirname + '/public/views/pages/static.html');
 });
 
 //app Initialize
